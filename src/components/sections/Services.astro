@@ -1,0 +1,47 @@
+---
+import SectionHeader from "../SectionHeader.astro";
+import CardService from "../CardService.astro";
+---
+
+<section id="services" class="flex flex-col items-center gap-12 w-full bg-bg-primary py-24 px-[120px] max-w-[1440px] mx-auto">
+  <SectionHeader
+    title="Our Services"
+    subtitle="Comprehensive support for every aspect of your wellbeing."
+  />
+  <div class="flex flex-col gap-6 w-full">
+    <div class="flex gap-6 w-full">
+      <CardService
+        icon="chat-circle"
+        title="Individual Counseling"
+        description="One-on-one sessions with a licensed counselor tailored to your unique needs and goals."
+      />
+      <CardService
+        icon="brain"
+        title="Stress Management"
+        description="Learn practical techniques to manage workplace stress and prevent burnout."
+      />
+      <CardService
+        icon="scales"
+        title="Work-Life Balance"
+        description="Find harmony between professional demands and personal fulfillment."
+      />
+    </div>
+    <div class="flex gap-6 w-full">
+      <CardService
+        icon="heart"
+        title="Couples & Family Counseling"
+        description="Strengthen relationships and improve communication with those who matter most."
+      />
+      <CardService
+        icon="currency-circle-dollar"
+        title="Financial Counseling"
+        description="Reduce financial stress with guidance on budgeting, debt management, and planning."
+      />
+      <CardService
+        icon="phone-call"
+        title="Crisis Support"
+        description="Immediate access to trained professionals when you need urgent support. Available 24/7."
+      />
+    </div>
+  </div>
+</section>

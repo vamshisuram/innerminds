@@ -1,17 +1,30 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Hero from "../components/sections/Hero.astro";
+import HowItWorks from "../components/sections/HowItWorks.astro";
+import Services from "../components/sections/Services.astro";
+import Privacy from "../components/sections/Privacy.astro";
+import SocialProof from "../components/sections/SocialProof.astro";
+import Counselors from "../components/sections/Counselors.astro";
+import Resources from "../components/sections/Resources.astro";
+import FAQ from "../components/sections/FAQ.astro";
+import FinalCTA from "../components/sections/FinalCTA.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <div class="flex flex-col items-center w-full">
+    <NavBar />
+    <Hero />
+    <HowItWorks />
+    <Services />
+    <Privacy />
+    <SocialProof />
+    <Counselors />
+    <Resources />
+    <FAQ />
+    <FinalCTA />
+    <Footer />
+  </div>
+</BaseLayout>

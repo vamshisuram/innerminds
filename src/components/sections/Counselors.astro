@@ -1,0 +1,53 @@
+---
+import SectionHeader from "../SectionHeader.astro";
+import CardCounselor from "../CardCounselor.astro";
+---
+
+<section id="counselors" class="flex flex-col items-center gap-12 w-full bg-bg-primary py-24 px-[120px] max-w-[1440px] mx-auto">
+  <SectionHeader
+    title="Meet Your Counselors"
+    subtitle="Our diverse team of licensed professionals specializes in the challenges you face every day."
+  />
+  <div class="flex gap-6 justify-center w-full">
+    <CardCounselor
+      name="Dr. Sarah Mitchell"
+      credentials="PhD, LCSW — 12 years experience"
+      photo="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=560&h=400&fit=crop"
+      tags={[
+        { label: "Anxiety", color: "primary" },
+        { label: "Burnout", color: "primary" },
+        { label: "Stress", color: "secondary" },
+      ]}
+    />
+    <CardCounselor
+      name="Marcus Johnson, LPC"
+      credentials="MA, LPC — 8 years experience"
+      photo="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=560&h=400&fit=crop"
+      tags={[
+        { label: "Depression", color: "primary" },
+        { label: "Career", color: "primary" },
+        { label: "Grief", color: "secondary" },
+      ]}
+    />
+    <CardCounselor
+      name="Dr. Mei-Lin Chen"
+      credentials="PsyD, LMFT — 15 years experience"
+      photo="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=560&h=400&fit=crop"
+      tags={[
+        { label: "Couples", color: "primary" },
+        { label: "Family", color: "primary" },
+        { label: "Communication", color: "secondary" },
+      ]}
+    />
+    <CardCounselor
+      name="Raj Patel, LCSW"
+      credentials="MSW, LCSW — 6 years experience"
+      photo="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=560&h=400&fit=crop"
+      tags={[
+        { label: "Workplace", color: "primary" },
+        { label: "Identity", color: "primary" },
+        { label: "Transitions", color: "secondary" },
+      ]}
+    />
+  </div>
+</section>

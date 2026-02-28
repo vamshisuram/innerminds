@@ -1,0 +1,34 @@
+---
+import SectionHeader from "../SectionHeader.astro";
+import CardResource from "../CardResource.astro";
+---
+
+<section id="resources" class="flex flex-col items-center gap-12 w-full bg-bg-feature py-24 px-[120px] max-w-[1440px] mx-auto">
+  <SectionHeader
+    title="Resources & Self-Help"
+    subtitle="Explore tools and articles to support your wellbeing — even before booking a session."
+  />
+  <div class="flex gap-6 w-full">
+    <CardResource
+      image="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop"
+      tag="Article"
+      tagColor="green"
+      title="5 Techniques to Manage Workplace Stress"
+      description="Simple, evidence-based strategies you can use today."
+    />
+    <CardResource
+      image="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=400&fit=crop"
+      tag="Guided Exercise"
+      tagColor="teal"
+      title="Mindful Breathing for Anxiety Relief"
+      description="A 5-minute guided exercise to calm your mind."
+    />
+    <CardResource
+      image="https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&h=400&fit=crop"
+      tag="Self-Assessment"
+      tagColor="amber"
+      title="How Are You Really Feeling? A Quick Check-In"
+      description="Take 2 minutes to check in with yourself."
+    />
+  </div>
+</section>

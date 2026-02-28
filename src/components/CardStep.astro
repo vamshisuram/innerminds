@@ -1,0 +1,27 @@
+---
+interface Props {
+  number: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const { number, icon, title, description } = Astro.props;
+
+const iconPaths: Record<string, string> = {
+  "clipboard-text": '<path d="M200,32H163.74a47.92,47.92,0,0,0-71.48,0H56A16,16,0,0,0,40,48V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm-72,0a32,32,0,0,1,32,32H96A32,32,0,0,1,128,32Zm32,128H96a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Zm0-32H96a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Z"></path>',
+  "users": '<path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"></path>',
+  "calendar-check": '<path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H72v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,168.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"></path>',
+};
+---
+
+<div class="flex flex-col items-center gap-4 bg-bg-cards rounded-lg shadow-[0_2px_8px_#1A2B3C14] p-8 flex-1">
+  <div class="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full">
+    <span class="font-body text-xl font-bold">{number}</span>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="text-primary" viewBox="0 0 256 256">
+    <Fragment set:html={iconPaths[icon] || iconPaths["clipboard-text"]} />
+  </svg>
+  <h3 class="font-heading text-xl font-semibold text-text-primary text-center">{title}</h3>
+  <p class="font-body text-base text-text-secondary leading-[1.6] text-center">{description}</p>
+</div>

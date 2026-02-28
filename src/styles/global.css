@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@import "@fontsource-variable/playfair-display";
+@import "@fontsource/lato/400.css";
+@import "@fontsource/lato/400-italic.css";
+@import "@fontsource/lato/700.css";
+
+@theme {
+  /* Colors */
+  --color-primary: #0A5E6B;
+  --color-primary-dark: #073F48;
+  --color-primary-light: #E0EEF0;
+  --color-accent: #E8B86D;
+  --color-accent-hover: #D4A05A;
+  --color-secondary: #2D7D46;
+  --color-secondary-light: #E8F5E9;
+  --color-bg-primary: #F7F5F0;
+  --color-bg-cards: #FFFFFF;
+  --color-bg-feature: #E4F2F0;
+  --color-text-primary: #1A2B3C;
+  --color-text-secondary: #5A6B7C;
+  --color-text-tertiary: #8A95A0;
+  --color-border-default: #D8DDE3;
+  --color-border-divider: #EEF0F2;
+  --color-error: #C75050;
+  --color-crisis-bg: #FFF5F5;
+
+  /* Fonts */
+  --font-heading: "Playfair Display Variable", serif;
+  --font-body: "Lato", sans-serif;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+/* Base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

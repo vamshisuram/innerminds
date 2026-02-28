@@ -1,0 +1,41 @@
+---
+import Badge from "../Badge.astro";
+import Button from "../Button.astro";
+---
+
+<section class="flex items-center gap-16 w-full bg-gradient-to-b from-bg-primary to-bg-feature h-[640px] px-[120px] max-w-[1440px] mx-auto">
+  <div class="flex flex-col gap-6 flex-1">
+    <Badge variant="confidential" label="100% Confidential" />
+    <h1 class="font-heading text-5xl font-bold text-text-primary leading-[1.15] tracking-tight">
+      Your well-being matters.<br />Support is here, always confidential.
+    </h1>
+    <p class="font-body text-xl text-text-secondary leading-[1.6] max-w-[520px]">
+      Licensed counselors available 24/7 — completely free and confidential through your employer. Because everyone deserves someone to talk to.
+    </p>
+    <div class="flex items-center gap-4">
+      <Button variant="primary" href="#get-started">Find Your Counselor</Button>
+      <Button variant="secondary" href="#how-it-works">Learn How It Works</Button>
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-text-tertiary" viewBox="0 0 256 256">
+          <path d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Z"></path>
+        </svg>
+        <span class="font-body text-[13px] text-text-tertiary">End-to-end encrypted</span>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-text-tertiary" viewBox="0 0 256 256">
+          <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-64-48a47.81,47.81,0,0,0-24,6.44V72a8,8,0,0,0-16,0V128a8,8,0,0,0,8,8,48,48,0,1,0,32-56Z"></path>
+        </svg>
+        <span class="font-body text-[13px] text-text-tertiary">500+ licensed counselors</span>
+      </div>
+    </div>
+  </div>
+  <div class="w-[480px] h-[480px] rounded-3xl overflow-hidden shrink-0">
+    <img
+      src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=960&h=960&fit=crop"
+      alt="Counseling session"
+      class="w-full h-full object-cover"
+    />
+  </div>
+</section>

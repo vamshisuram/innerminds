@@ -1,0 +1,27 @@
+---
+interface Props {
+  variant?: "primary" | "secondary" | "text" | "secondary-light";
+  href?: string;
+  class?: string;
+}
+
+const { variant = "primary", href = "#", class: className = "" } = Astro.props;
+
+const baseClasses = "inline-flex items-center gap-2 font-body font-semibold text-base tracking-wide transition-colors cursor-pointer";
+
+const variantClasses: Record<string, string> = {
+  primary: "bg-accent hover:bg-accent-hover text-text-primary rounded-md px-8 py-4",
+  secondary: "bg-transparent border-2 border-primary text-primary rounded-md px-[30px] py-[14px] hover:bg-primary-light",
+  "secondary-light": "bg-transparent border-2 border-white/40 text-white rounded-md px-[30px] py-[14px] hover:bg-white/10",
+  text: "text-primary font-medium px-1 py-2",
+};
+---
+
+<a href={href} class:list={[baseClasses, variantClasses[variant], className]}>
+  <slot />
+  {variant === "text" && (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256">
+      <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69l-58.35-58.34a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+    </svg>
+  )}
+</a>

@@ -1,0 +1,31 @@
+---
+import SectionHeader from "../SectionHeader.astro";
+import CardStep from "../CardStep.astro";
+---
+
+<section id="how-it-works" class="flex flex-col items-center gap-12 w-full bg-bg-cards py-24 px-[120px] max-w-[1440px] mx-auto">
+  <SectionHeader
+    title="How It Works"
+    subtitle="Getting started is simple — just three easy steps to feeling better."
+  />
+  <div class="flex gap-8 w-full">
+    <CardStep
+      number="1"
+      icon="clipboard-text"
+      title="Complete a Brief Assessment"
+      description="Answer a few simple questions so we can understand your needs and match you with the right counselor."
+    />
+    <CardStep
+      number="2"
+      icon="users"
+      title="Get Matched with a Counselor"
+      description="We'll match you with a licensed professional who specializes in what you're going through."
+    />
+    <CardStep
+      number="3"
+      icon="calendar-check"
+      title="Begin Sessions on Your Schedule"
+      description="Meet your counselor via video, phone, or chat — whenever works best for you."
+    />
+  </div>
+</section>

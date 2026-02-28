@@ -1,0 +1,33 @@
+---
+import SectionHeader from "../SectionHeader.astro";
+import FAQItem from "../FAQItem.astro";
+---
+
+<section id="faq" class="flex flex-col items-center gap-12 w-full bg-bg-cards py-24 px-[120px] max-w-[1440px] mx-auto">
+  <SectionHeader
+    title="Frequently Asked Questions"
+    subtitle="We know reaching out can feel like a big step. Here are answers to the questions we hear most."
+  />
+  <div class="flex flex-col w-full max-w-[680px]">
+    <FAQItem
+      question="Is my information truly confidential?"
+      answer="Yes, absolutely. Your conversations are protected by therapist-client privilege. Your employer will never see your personal information — only anonymized, aggregate usage data is reported."
+    />
+    <FAQItem
+      question="Is there really no cost to me?"
+      answer="That's right. Your employer covers the full cost of your counseling sessions as part of your benefits package. There are no copays, deductibles, or hidden fees."
+    />
+    <FAQItem
+      question="What happens in a typical session?"
+      answer="Your first session is a getting-to-know-you conversation where your counselor learns about what you're going through. Together, you'll set goals and create a plan that works for you."
+    />
+    <FAQItem
+      question="Can I change or cancel my appointment?"
+      answer="Of course. You can reschedule or cancel anytime through your dashboard. We just ask for 24 hours' notice when possible so we can offer the slot to someone else."
+    />
+    <FAQItem
+      question="How are counselors matched to me?"
+      answer="Based on your brief assessment, we match you with a licensed counselor who specializes in the areas most relevant to your needs. You can always request a different counselor if the fit isn't right."
+    />
+  </div>
+</section>

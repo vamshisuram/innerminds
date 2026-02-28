@@ -1,0 +1,32 @@
+---
+import SectionHeader from "../SectionHeader.astro";
+import CardStat from "../CardStat.astro";
+import CardTestimonial from "../CardTestimonial.astro";
+---
+
+<section class="flex flex-col items-center gap-12 w-full bg-bg-cards py-24 px-[120px] max-w-[1440px] mx-auto">
+  <SectionHeader
+    title="Trusted by Thousands"
+    subtitle="Real results from real people — here's what the numbers show."
+  />
+  <div class="flex gap-6 justify-center w-full">
+    <CardStat number="95%" label="Report feeling better after 3 sessions" />
+    <CardStat number="50K+" label="Sessions delivered this year" />
+    <CardStat number="500+" label="Licensed counselors available" />
+    <CardStat number="24/7" label="Support available around the clock" />
+  </div>
+  <div class="flex gap-6 w-full">
+    <CardTestimonial
+      quote="The counseling I received helped me navigate a really difficult period at work. I felt heard and supported every step of the way."
+      role="Marketing Manager, Fortune 500"
+    />
+    <CardTestimonial
+      quote="I was skeptical at first, but my counselor truly understood the pressures of my role. It's been life-changing for my family relationships."
+      role="Engineering Director, Tech Company"
+    />
+    <CardTestimonial
+      quote="Knowing this is completely confidential gave me the courage to reach out. Best decision I've made for myself in years."
+      role="Senior Analyst, Financial Services"
+    />
+  </div>
+</section>

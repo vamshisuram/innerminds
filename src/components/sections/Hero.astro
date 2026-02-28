@@ -3,7 +3,8 @@ import Badge from "../Badge.astro";
 import Button from "../Button.astro";
 ---
 
-<section class="flex items-center gap-16 w-full bg-gradient-to-b from-bg-primary to-bg-feature h-[640px] px-[120px] max-w-[1440px] mx-auto">
+<section class="w-full bg-gradient-to-b from-bg-primary to-bg-feature">
+<div class="flex items-center gap-16 h-[640px] px-[120px] max-w-[1440px] mx-auto">
   <div class="flex flex-col gap-6 flex-1">
     <Badge variant="confidential" label="100% Confidential" />
     <h1 class="font-heading text-5xl font-bold text-text-primary leading-[1.15] tracking-tight">
@@ -38,4 +39,5 @@ import Button from "../Button.astro";
       class="w-full h-full object-cover"
     />
   </div>
+</div>
 </section>

@@ -8,15 +8,15 @@ const { quote, role } = Astro.props;
 ---
 
 <div class="flex flex-col gap-5 bg-bg-cards rounded-lg shadow-[0_2px_8px_#1A2B3C14] p-8 flex-1">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="text-primary-light" viewBox="0 0 256 256">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="text-primary-light" viewBox="0 0 256 256" aria-hidden="true">
     <path d="M100,56H40A16,16,0,0,0,24,72v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,100,56Zm0,80H40V72h60ZM216,56H156a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,216,56Zm0,80H156V72h60Z"></path>
   </svg>
   <p class="font-body text-base italic text-text-primary leading-[1.7]">{quote}</p>
   <div class="flex flex-col gap-1">
     <span class="font-body text-sm font-medium text-text-secondary">{role}</span>
-    <div class="flex gap-1">
+    <div class="flex gap-1" role="img" aria-label="Rated 5 out of 5 stars">
       {[1,2,3,4,5].map(() => (
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-accent" viewBox="0 0 256 256">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-accent" viewBox="0 0 256 256" aria-hidden="true">
           <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59.46-5.15,23.21-55.36a16.4,16.4,0,0,1,30.5,0l23.21,55.36L226.92,86A16.46,16.46,0,0,1,234.29,114.85Z"></path>
         </svg>
       ))}

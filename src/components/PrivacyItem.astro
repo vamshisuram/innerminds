@@ -16,11 +16,11 @@ const iconPaths: Record<string, string> = {
 ---
 
 <div class="flex gap-4 w-full">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-primary shrink-0 mt-0.5" viewBox="0 0 256 256">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-primary shrink-0 mt-0.5" viewBox="0 0 256 256" aria-hidden="true">
     <Fragment set:html={iconPaths[icon] || iconPaths["lock-simple"]} />
   </svg>
   <div class="flex flex-col gap-1">
-    <h4 class="font-body text-base font-semibold text-text-primary">{question}</h4>
+    <h3 class="font-body text-base font-semibold text-text-primary">{question}</h3>
     <p class="font-body text-base text-text-secondary leading-[1.6]">{answer}</p>
   </div>
 </div>

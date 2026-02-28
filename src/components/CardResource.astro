@@ -14,7 +14,7 @@ const { image, tag, tagColor = "green", title, description } = Astro.props;
 const tagStyles: Record<string, string> = {
   green: "bg-secondary-light text-secondary",
   teal: "bg-primary-light text-primary",
-  amber: "bg-[#FFF3E0] text-accent-hover",
+  amber: "bg-[#FFF3E0] text-[#8B6914]",
 };
 ---
 
@@ -28,11 +28,11 @@ const tagStyles: Record<string, string> = {
     </span>
     <h3 class="font-heading text-lg font-semibold text-text-primary">{title}</h3>
     <p class="font-body text-sm text-text-secondary leading-[1.6]">{description}</p>
-    <span class="inline-flex items-center gap-1.5 text-primary font-body font-medium text-base px-1 py-2 cursor-pointer" role="link" tabindex="0">
+    <a href="#resources" class="inline-flex items-center gap-1.5 text-primary font-body font-medium text-base px-1 py-2">
       Read More
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
         <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69l-58.35-58.34a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
       </svg>
-    </span>
+    </a>
   </div>
 </div>

@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   name: string;
   credentials: string;
@@ -16,7 +18,7 @@ const tagColors = {
 
 <div class="flex flex-col bg-bg-cards rounded-lg shadow-[0_2px_8px_#1A2B3C14] overflow-hidden flex-1">
   <div class="w-full h-[200px] bg-primary-light overflow-hidden">
-    <img src={photo} alt={name} class="w-full h-full object-cover" loading="lazy" />
+    <Image src={photo} alt={name} width={280} height={200} class="w-full h-full object-cover" loading="lazy" />
   </div>
   <div class="flex flex-col gap-3 p-6">
     <h3 class="font-heading text-lg font-semibold text-text-primary">{name}</h3>

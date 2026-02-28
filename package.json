@@ -9,14 +9,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.17.1",
-    "tailwindcss": "^4.0.0",
-    "@tailwindcss/vite": "^4.0.0",
     "@fontsource-variable/playfair-display": "^5.0.0",
     "@fontsource/lato": "^5.0.0",
-    "@phosphor-icons/web": "^2.0.0"
+    "@phosphor-icons/web": "^2.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "astro": "^5.17.1",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.0.0"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild", "sharp"]
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   }
 }

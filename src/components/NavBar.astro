@@ -3,7 +3,7 @@ import Button from "./Button.astro";
 ---
 
 <nav class="sticky top-0 z-50 bg-bg-cards w-full">
-  <div class="flex items-center justify-between h-[72px] px-16 max-w-[1440px] mx-auto">
+  <div class="flex items-center justify-between h-[72px] px-6 md:px-12 lg:px-16 max-w-[1440px] mx-auto">
   <div class="flex items-center gap-2">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="text-primary" viewBox="0 0 256 256" aria-hidden="true">
       <path d="M223.45,40.07a8,8,0,0,0-7.52-7.52C139.8,28.08,78.82,50,52.82,94a87.09,87.09,0,0,0-12.76,49c.57,15.92,5.21,32,13.79,47.85l-19.51,19.5a8,8,0,0,0,11.32,11.32l19.51-19.51C81.18,210.93,97.34,215.56,113.25,216.14q2.56.09,5.09.09A86.76,86.76,0,0,0,162,203.18C206,177.18,227.93,116.21,223.45,40.07ZM153.75,189.5c-22.75,13.78-49.68,14-76.71.77L165.9,101.4a8,8,0,0,0-11.31-11.31L65.73,179c-13.19-27-13-54,.77-76.71,22.09-36.47,74.3-56.44,141.31-54.06C209.19,115.2,189.22,167.41,153.75,189.5Z"></path>
@@ -11,7 +11,8 @@ import Button from "./Button.astro";
     <span class="font-body font-bold text-xl text-text-primary">Inner Mind Solutions</span>
   </div>
 
-  <div class="flex items-center gap-8">
+  <!-- Desktop nav links -->
+  <div class="hidden lg:flex items-center gap-8">
     <a href="#how-it-works" class="font-body text-base text-text-secondary hover:text-primary transition-colors">How It Works</a>
     <a href="#counselors" class="font-body text-base text-text-secondary hover:text-primary transition-colors">Our Counselors</a>
     <a href="#services" class="font-body text-base text-text-secondary hover:text-primary transition-colors">Services</a>
@@ -19,6 +20,60 @@ import Button from "./Button.astro";
     <a href="#faq" class="font-body text-base text-text-secondary hover:text-primary transition-colors">About</a>
   </div>
 
-  <Button variant="primary" href="#get-started" class="!text-sm !py-3 !px-6">Get Started</Button>
+  <div class="flex items-center gap-4">
+    <Button variant="primary" href="#get-started" class="!text-sm !py-3 !px-6 hidden md:inline-flex">Get Started</Button>
+
+    <!-- Mobile hamburger button -->
+    <button
+      id="mobile-menu-btn"
+      class="lg:hidden flex items-center justify-center w-10 h-10 text-text-primary"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
+        <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+      </svg>
+      <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" class="hidden">
+        <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+      </svg>
+    </button>
+  </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-border-divider bg-bg-cards px-6 pb-6">
+    <div class="flex flex-col gap-4 pt-4">
+      <a href="#how-it-works" class="font-body text-base text-text-secondary hover:text-primary transition-colors py-2">How It Works</a>
+      <a href="#counselors" class="font-body text-base text-text-secondary hover:text-primary transition-colors py-2">Our Counselors</a>
+      <a href="#services" class="font-body text-base text-text-secondary hover:text-primary transition-colors py-2">Services</a>
+      <a href="#resources" class="font-body text-base text-text-secondary hover:text-primary transition-colors py-2">Resources</a>
+      <a href="#faq" class="font-body text-base text-text-secondary hover:text-primary transition-colors py-2">About</a>
+      <Button variant="primary" href="#get-started" class="md:hidden w-full !justify-center">Get Started</Button>
+    </div>
   </div>
 </nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden');
+    iconOpen?.classList.toggle('hidden');
+    iconClose?.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  // Close menu when clicking a link
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+      btn?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

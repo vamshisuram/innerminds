@@ -5,18 +5,18 @@ import CardTestimonial from "../CardTestimonial.astro";
 ---
 
 <section class="w-full bg-bg-cards">
-<div class="flex flex-col items-center gap-12 py-24 px-[120px] max-w-[1440px] mx-auto">
+<div class="flex flex-col items-center gap-12 py-16 lg:py-24 px-6 md:px-12 lg:px-[120px] max-w-[1440px] mx-auto">
   <SectionHeader
     title="Trusted by Thousands"
     subtitle="Real results from real people — here's what the numbers show."
   />
-  <div class="flex gap-6 justify-center w-full">
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full">
     <CardStat number="95%" label="Report feeling better after 3 sessions" />
     <CardStat number="50K+" label="Sessions delivered this year" />
     <CardStat number="500+" label="Licensed counselors available" />
     <CardStat number="24/7" label="Support available around the clock" />
   </div>
-  <div class="flex gap-6 w-full">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
     <CardTestimonial
       quote="The counseling I received helped me navigate a really difficult period at work. I felt heard and supported every step of the way."
       role="Marketing Manager, Fortune 500"

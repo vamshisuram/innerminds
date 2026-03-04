@@ -4,15 +4,15 @@ import PrivacyItem from "../PrivacyItem.astro";
 ---
 
 <section class="w-full bg-bg-feature">
-<div class="flex items-center gap-16 py-24 px-[120px] max-w-[1440px] mx-auto">
+<div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 py-16 lg:py-24 px-6 md:px-12 lg:px-[120px] max-w-[1440px] mx-auto">
   <!-- Left: Icon + Badges -->
-  <div class="flex flex-col items-center gap-6 w-[340px] shrink-0">
-    <div class="flex items-center justify-center w-[120px] h-[120px] bg-primary rounded-full">
+  <div class="flex flex-col items-center gap-6 w-full lg:w-[340px] shrink-0">
+    <div class="flex items-center justify-center w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] bg-primary rounded-full">
       <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="text-white" viewBox="0 0 256 256">
         <path d="M208,40H48A16,16,0,0,0,32,56v58.77c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm-34.34,69.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"></path>
       </svg>
     </div>
-    <div class="flex gap-3">
+    <div class="flex flex-wrap justify-center gap-3">
       <Badge variant="certification" label="HIPAA Compliant" />
       <Badge variant="certification" label="SOC 2 Type II" />
     </div>
@@ -20,8 +20,8 @@ import PrivacyItem from "../PrivacyItem.astro";
 
   <!-- Right: Content -->
   <div class="flex flex-col gap-6 flex-1">
-    <h2 class="font-heading text-[32px] font-bold text-text-primary">Your Privacy Is Our Promise</h2>
-    <p class="font-body text-lg text-text-secondary leading-[1.6]">
+    <h2 class="font-heading text-2xl md:text-[32px] font-bold text-text-primary text-center lg:text-left">Your Privacy Is Our Promise</h2>
+    <p class="font-body text-lg text-text-secondary leading-[1.6] text-center lg:text-left">
       We understand that confidentiality is your biggest concern. Here's exactly how we protect you.
     </p>
     <div class="flex flex-col gap-5">

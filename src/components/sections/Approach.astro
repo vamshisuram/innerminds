@@ -1,0 +1,26 @@
+---
+import SectionHeader from "../SectionHeader.astro";
+import CardService from "../CardService.astro";
+---
+
+<section id="approach" class="w-full bg-bg-primary">
+<!-- <section class="w-full bg-gradient-to-b from-bg-primary to-bg-feature"> -->
+<div class="flex flex-col items-center gap-12 py-16 lg:py-24 px-6 md:px-12 lg:px-[120px] max-w-[1440px] mx-auto">
+  <SectionHeader
+    title="Approach"
+    subtitle="Our Approach with Choice Theory and Reality Therapy"
+  />
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full">
+    <CardService
+      icon="chat-circle"
+      title="What is CTRT?"
+      description="Choice Theory & reality Therapy focus on understanding our needs, the behaviours we choose, and how responsibility shapes fulfillment."
+    />
+    <CardService
+      icon="scales"
+      title="Leadership backed by Concepts of Lead Management"
+      description="It shifts focus from external control to internal leadership of one's own behaviour."
+    />
+  </div>
+</div>
+</section>
